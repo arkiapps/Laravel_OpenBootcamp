@@ -44,7 +44,7 @@ Route::get('/{cadena}', function ($cadena = null) {
     ]);
 });
 */
- Route::view('/', 'paginaone');
+ Route::view('/', 'pagina');
  Route::get('/{cadena}', function ($cadena = null) {
 
  });

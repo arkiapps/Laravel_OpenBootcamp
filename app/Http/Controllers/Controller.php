@@ -14,5 +14,7 @@ class Controller extends BaseController
     public function ExampleFunction(){
         $publicKey = config('parametros.key');
         config('parametros.key', 'my-other-key');
+
+        $myVariable = env('APP_NAME', 'No value');
     }
 }
