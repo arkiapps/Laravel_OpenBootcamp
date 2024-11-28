@@ -25,6 +25,7 @@ Route::get('/', function () {
 });
 */
 
+/*
 Route::get('/{cadena}', function ($cadena = null) {
     $resultado = 'No conocido';
     switch($resultado){
@@ -42,3 +43,8 @@ Route::get('/{cadena}', function ($cadena = null) {
         'cadena' => $resultado
     ]);
 });
+*/
+ Route::view('/', 'paginaone');
+ Route::get('/{cadena}', function ($cadena = null) {
+
+ });
