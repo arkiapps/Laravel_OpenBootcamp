@@ -22,15 +22,9 @@ $lecciones = [
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
 </head>
 <body>
-    <h1>Pagina numero uno</h1>
-    <p>Primer ejercicio del curso laravel de openbootcamp, con laravel 10</p>
-    <p>MI nombre es {{$myName}} y estoy contento de avanzar en mis estudios con este curso de laravel</p>
-    <h4>Que hemos visto?</h4>
-    <ul>
-        @foreach ($lecciones as $l)
-        <li> {{$l}} </li>
-        @endforeach
-    </ul>
+    <h1>Pagina de Inicio</h1>
+    <p>Mi pagina de home, con laravel 10</p>
+    <a href="/contacto">Contacto</a>
 
     <script src="{{ asset('js/script.js') }}"></script>
 </body>

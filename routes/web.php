@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,13 +45,10 @@ Route::get('/{cadena}', function ($cadena = null) {
     ]);
 });
 */
- Route::view('/', 'pagina');
- Route::get('/{cadena}', function ($cadena = null) {
 
- });
  Route::view('/', 'home');
- Route::get('/contacto', [MyFirstController::class, 'contactContacto']);
- Route::post('/contacto', [MyFirstController::class, 'processContacto']);
+ Route::get('/contacto', [ContactoController::class, 'contactContacto']);
+ Route::post('/contacto', [ContactoController::class, 'processContacto']);
  //Route::put('/contacto', [MyFirstController::class, 'contactPage']);
  //Route::patch('/contacto', [MyFirstController::class, 'contactPage']);
  //Route::delete('/contacto', [MyFirstController::class, 'contactPage']);
