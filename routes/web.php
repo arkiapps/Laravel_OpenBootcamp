@@ -49,8 +49,8 @@ Route::get('/{cadena}', function ($cadena = null) {
 
  });
  Route::view('/', 'home');
- Route::get('/contacto', [MyFirstController::class, 'contactPage']);
- Route::post('/contacto', [MyFirstController::class, 'processPage']);
+ Route::get('/contacto', [MyFirstController::class, 'contactContacto']);
+ Route::post('/contacto', [MyFirstController::class, 'processContacto']);
  //Route::put('/contacto', [MyFirstController::class, 'contactPage']);
  //Route::patch('/contacto', [MyFirstController::class, 'contactPage']);
  //Route::delete('/contacto', [MyFirstController::class, 'contactPage']);
