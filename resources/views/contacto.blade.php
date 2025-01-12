@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Mi pagina de contacto</h1>
-    <form action="/contacto" autocomplete="off">
+    <form action="/contacto" method="POST" autocomplete="off">
     @csrf
     <div>
         <label for="Nombre">

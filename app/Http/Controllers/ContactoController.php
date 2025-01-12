@@ -10,4 +10,9 @@ class ContactoController extends Controller
     {
         return view('contacto'); // Asegúrate de tener la vista 'contacto.blade.php' en resources/views
     }
+
+    public function processContacto(Request $request) {
+        echo "Formulario Completado";
+        die();
+    }
 }

@@ -45,6 +45,27 @@ Route::get('/{cadena}', function ($cadena = null) {
     ]);
 });
 */
+// Rutas con Varbales:
+Route::get('/post/{id}/{slug}', function($category, $slug = null) {
+
+    $miCategoria = $this->recuperarMiCategoria($category);
+
+    if($slug == null)
+    $post = $this->recuperarMiUltimoPost();
+    else
+    $post = $this->recuperarMiPostMedianteSlug($slug);
+    return $post;
+});
+
+Route::match(['GET', 'POST'], '/{slug}/{id}/{category}',
+    function($slug = "laravel-9",
+    $id = null,
+    $category = null){
+    $categoria = $this->recuperarMiPostMedianteSlug($slug);
+    return $categoria;
+});
+
+
 
  Route::view('/', 'home');
  Route::get('/contacto', [ContactoController::class, 'contactContacto']);
