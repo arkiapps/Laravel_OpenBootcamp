@@ -48,3 +48,15 @@ Route::get('/{cadena}', function ($cadena = null) {
  Route::get('/{cadena}', function ($cadena = null) {
 
  });
+ Route::view('/', 'home');
+ Route::get('/contacto', [MyFirstController::class, 'contactPage']);
+ Route::post('/contacto', [MyFirstController::class, 'processPage']);
+ //Route::put('/contacto', [MyFirstController::class, 'contactPage']);
+ //Route::patch('/contacto', [MyFirstController::class, 'contactPage']);
+ //Route::delete('/contacto', [MyFirstController::class, 'contactPage']);
+ //Route::head('/contacto', [MyFirstController::class, 'contactPage']);
+ //Route::options('/contacto', [MyFirstController::class, 'contactPage']);
+ //Route::match(['GET', 'POST']', '/uri', [MyFirstController::class, 'matchedFunction']);
+ //Route::anu('/example, [MyFirstController::class, 'anyFunction']);
+ //Route::redirect('/route1', '/route2');
+ //Route::redirectPermanent('/route1', '/route2');
