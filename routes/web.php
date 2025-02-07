@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Varibales con condiciones: Poner condiciones dentro de las rutas
+Route::get('/{category}/{slug}', function($category = 'a', $slug = 'post'){
+   echo $category. '<br />'. $slug;
+})->where('category', '[0-9]+')->where('slug', '[\w-]+');
+
+
+Route::get('/my-controller/{id}', [ContactoController::class, 'myControllerFuntion']);
 /*
 Route::get('/', function () {
 
@@ -46,6 +54,7 @@ Route::get('/{cadena}', function ($cadena = null) {
 });
 */
 // Rutas con Varbales:
+/*
 Route::get('/post/{id}/{slug}', function($category, $slug = null) {
 
     $miCategoria = $this->recuperarMiCategoria($category);
@@ -64,6 +73,7 @@ Route::match(['GET', 'POST'], '/{slug}/{id}/{category}',
     $categoria = $this->recuperarMiPostMedianteSlug($slug);
     return $categoria;
 });
+*/
 
 
 
